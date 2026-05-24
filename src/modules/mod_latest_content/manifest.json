@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "name": "mod_latest_content",
+  "type": "module",
+  "vendor": "klucon",
+  "extension_id": "klucon/mod_latest_content",
+  "version": "0.1.0",
+  "display_name": "Nejnovější články",
+  "display_name_key": "extensions.name.mod_latest_content",
+  "description": "Frontend modul pro výpis nejnovějších publikovaných článků.",
+  "license": "MIT",
+  "author": {
+    "name": "KLUCON",
+    "url": "https://klucon.cz"
+  },
+  "links": {
+    "homepage": "https://marketplace.klucon.cz",
+    "repository": "https://github.com/klucon/mod_latest_content"
+  },
+  "compatibility": {
+    "core_min": "0.2.15",
+    "core_max": null,
+    "python": ">=3.12",
+    "database": ["mysql", "postgresql"]
+  },
+  "package": {
+    "python_package": "mod_latest_content",
+    "entrypoint": "src.modules.mod_latest_content",
+    "setup_function": "setup",
+    "module_module": "module",
+    "render_function": "render"
+  },
+  "permissions": [],
+  "i18n": {
+    "domain": "mod_latest_content",
+    "locales_path": "i18n",
+    "required_locales": ["cs_CZ", "en_GB"]
+  },
+  "migrations": {
+    "enabled": false,
+    "path": "migrations"
+  },
+  "security": {
+    "requires_signature": true,
+    "capabilities": ["module.render", "database.read"]
+  },
+  "settings_schema": [
+    {
+      "key": "limit",
+      "type": "number",
+      "label": "Počet článků",
+      "default": 5
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Nadpis",
+      "default": "Nejnovější články"
+    },
+    {
+      "key": "content_slug",
+      "type": "text",
+      "label": "Slug článků",
+      "default": "clanky"
+    }
+  ],
+  "marketplace": {
+    "category": "content",
+    "tags": ["content", "articles", "latest"],
+    "featured": false
+  },
+  "min_cms_version": "0.2.15",
+  "categories": ["content"],
+  "supported_locales": ["cs_CZ", "en_GB"],
+  "changelog": "První verze modulu nejnovějších článků."
+}
