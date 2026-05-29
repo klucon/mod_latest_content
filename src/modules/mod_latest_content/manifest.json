@@ -4,7 +4,7 @@
   "type": "module",
   "vendor": "klucon",
   "extension_id": "klucon/mod_latest_content",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "display_name": "Nejnovější články",
   "display_name_key": "extensions.name.mod_latest_content",
   "description": "Frontend modul pro výpis nejnovějších publikovaných článků.",
@@ -21,7 +21,10 @@
     "core_min": "0.2.15",
     "core_max": null,
     "python": ">=3.12",
-    "database": ["mysql", "postgresql"]
+    "database": [
+      "mysql",
+      "postgresql"
+    ]
   },
   "package": {
     "python_package": "mod_latest_content",
@@ -34,7 +37,10 @@
   "i18n": {
     "domain": "mod_latest_content",
     "locales_path": "i18n",
-    "required_locales": ["cs_CZ", "en_GB"]
+    "required_locales": [
+      "cs_CZ",
+      "en_GB"
+    ]
   },
   "migrations": {
     "enabled": false,
@@ -42,7 +48,10 @@
   },
   "security": {
     "requires_signature": true,
-    "capabilities": ["module.render", "database.read"]
+    "capabilities": [
+      "module.render",
+      "database.read"
+    ]
   },
   "settings_schema": [
     {
@@ -66,11 +75,20 @@
   ],
   "marketplace": {
     "category": "content",
-    "tags": ["content", "articles", "latest"],
+    "tags": [
+      "content",
+      "articles",
+      "latest"
+    ],
     "featured": false
   },
   "min_cms_version": "0.2.15",
-  "categories": ["content"],
-  "supported_locales": ["cs_CZ", "en_GB"],
+  "categories": [
+    "content"
+  ],
+  "supported_locales": [
+    "cs_CZ",
+    "en_GB"
+  ],
   "changelog": "První verze modulu nejnovějších článků."
 }
